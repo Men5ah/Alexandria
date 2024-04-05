@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandria | Sign Up</title>
     <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/register.js"></script>
 </head>
 <body>
     <form action="../actions/register_action.php" method="post">
