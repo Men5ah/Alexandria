@@ -30,7 +30,10 @@ checkLogin();
             </form>
         </div>
         
-        <?php include_once "../actions/displayreadinglist_action.php"?>
+        <?php
+        include_once "../actions/displayreadinglist_action.php";
+        include_once "../actions/get_all_readinglists.php";
+        ?>
         <script src="../js/readinglist.js"></script>
     </body>
 </html>
