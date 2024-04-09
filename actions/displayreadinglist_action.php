@@ -19,7 +19,7 @@ if(isset($_SESSION['userID'])) {
 
             // Generate HTML for the reading list section
             echo '<section>';
-            echo '<h2><a href="../views/readinglist_page.php?listID='.$listID.'">'.$listName.'</a></h2>';
+            echo '<h2><a href="../views/readinglist_books.php?listID=' . $listID . '">' . $listName . '</a></h2>';
             echo '</section>';
         }
     } else {

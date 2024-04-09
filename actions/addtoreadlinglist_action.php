@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Execute query and check if successful
     if (mysqli_query($conn, $insert)) {
-        echo "Book added to reading list successfully";
+        header("Location: ../views/dashboard.php");
     } else {
         echo "Error: " . $insert . "<br>" . mysqli_error($conn);
     }

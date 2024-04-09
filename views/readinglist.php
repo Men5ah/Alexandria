@@ -14,6 +14,9 @@ checkLogin();
     </head>
     <body>
         <h2>Reading Lists</h2>
+        <?php
+        include_once "../actions/displayreadinglist_action.php";
+        ?>
         <button id="togglePopup">Create New Reading List</button>
 
         <!-- Overlay to darken the background when the popup is displayed -->
@@ -29,11 +32,6 @@ checkLogin();
                 <button type="submit">Create</button>
             </form>
         </div>
-        
-        <?php
-        include_once "../actions/displayreadinglist_action.php";
-        include_once "../actions/get_all_readinglists.php";
-        ?>
         <script src="../js/readinglist.js"></script>
     </body>
 </html>
