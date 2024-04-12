@@ -96,31 +96,15 @@ function displaySearchResults(data) {
         linkElement.target = '_blank'; // Open link in new tab
         bookContainer.appendChild(linkElement);
 
-        // // Create button to add to a reading list
-        // const addtoReadingList = document.createElement('button');
-        // addtoReadingList.textContent = 'Add to Reading List';
-        // addtoReadingList.onclick = () => {
-        //     window.location.href = 'addtoreadinglist.php';
-        // };
-        // bookContainer.appendChild(addtoReadingList);
-        
-        // Create button to add to a reading list
         const addtoReadingList = document.createElement('button');
         addtoReadingList.textContent = 'Add to Reading List';
         addtoReadingList.onclick = () => {
-            // Set the selected book information
-            // setSelectedBookInfo(book.title, book.authors[0].name, book.id);
-            // console.log(book.title);
-            
-            // sendRequest("book="+book.title+"&author="+book.authors[0].name+"&bookID="+book.id)
-            // Redirect to addtoreadinglist.php
+
             window.location.href = '../views/addtoreadinglist.php?data='+encodeURIComponent(JSON.stringify({
                 "book": book.title,
                 "author": book.authors[0].name,
                 "bookID":book.id
             }));
-
-            // "book="+book.title+"&author="+book.authors[0].name+"&bookID="+book.id
         };
         bookContainer.appendChild(addtoReadingList);
         

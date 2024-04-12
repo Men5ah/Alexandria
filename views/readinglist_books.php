@@ -28,7 +28,7 @@ if (!$readingListId) {
     <h2>Reading List</h2>
     <div id="searchResults">
         <!-- Display books belonging to the reading list here -->
-        <?php displayReadingListBooks($readingListId); ?>
+        <?php displayReadingListBooks($readingListId);?>
     </div>
     <script src="../js/search.js"></script>
 </body>

@@ -16,6 +16,10 @@ function displayReadingListBooks($readingListId) {
             echo "<div class='book'>";
             echo "<ul>";
             echo "<li><a href='https://www.gutenberg.org/ebooks/{$row['gutenbergID']}'>{$row['booktitle']}, {$row['author']}</a></li>";
+            echo "<form action='../actions/deletebook_action.php' method='post'>";
+            echo "<input type='hidden' name='bookID' value='{$row['listbookID']}'>";
+            echo "<button type='submit'>Delete</button>";
+            echo "</form>";
             echo "</ul>";
             echo "</div>";
         }

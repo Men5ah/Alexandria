@@ -18,6 +18,7 @@ checkLogin();
         include_once "../actions/displayreadinglist_action.php";
         ?>
         <button id="togglePopup">Create New Reading List</button>
+        <button id=toggleModify>Modify a Reading List</button>
 
         <!-- Overlay to darken the background when the popup is displayed -->
         <div class="overlay" id="overlay"></div>
@@ -30,6 +31,21 @@ checkLogin();
                 <input type="text" id="listName" name="listName" required>
                 <br>
                 <button type="submit">Create</button>
+            </form>
+        </div>
+
+                <!-- Popup form for creating a new reading list -->
+        <div class="popupForm" id="popupFormModify">
+            <h3>Modify List</h3>
+            <form action="../actions/modifyreadinglist_action.php" method="post">
+            <?php
+                include_once "../actions/get_all_readinglists.php";
+                echo $selectList;
+            ?>
+                <label for="listName">New List Name:</label>
+                <input type="text" id="listName" name="listName" required>
+                <br>
+                <button type="submit">Modify</button>
             </form>
         </div>
         <script src="../js/readinglist.js"></script>

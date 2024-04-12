@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Welcome to Alexandria</h1>
-    <p><a href="#">Login</a></p>
-    <p>Don't have an account? <a href="#">Register</a></p>
+    <p><a href="/views/login.php">Login</a></p>
+    <p>Don't have an account? <a href="/views/register.php">Register</a></p>
 </body>
 </html>
