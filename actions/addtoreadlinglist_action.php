@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Execute query and check if successful
     if (mysqli_query($conn, $insert)) {
-        header("Location: ../views/dashboard.php");
+        header("Location: ../views/search.php");
     } else {
         echo "Error: " . $insert . "<br>" . mysqli_error($conn);
     }

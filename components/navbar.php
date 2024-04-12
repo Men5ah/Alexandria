@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="container">
         <div class="navbar-brand">
-            <a href="../views/dashboard.php" class="navbar-logo">Alexandria</a>
+            <a href="../views/search.php" class="navbar-logo">Alexandria</a>
         </div>
         <ul class="navbar-menu">
             <li class="navbar-item"><a href="../views/search.php" class="navbar-link">Search</a></li>
