@@ -3,6 +3,10 @@
     flex-wrap: wrap;
 }
 
+#searchForm{
+    margin-top: 20px;
+}
+
 .book {
     width: 300px;
     margin: 20px;
@@ -39,9 +43,6 @@
     text-decoration: underline;
     color: #0056b3;
 }
-/* search.css */
-
-/* Form styling */
 form {
     margin-bottom: 20px;
     display: flex;
@@ -57,9 +58,11 @@ input[type="text"] {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1em;
+    margin-right: 10px;
+    
 }
 
-button[type="submit"] {
+button[type="submit"], #nextButton, #prevButton {
     padding: 8px 16px;
     border-radius: 5px;
     background-color: #007bff;
@@ -69,6 +72,10 @@ button[type="submit"] {
     font-size: 1em;
 }
 
-button[type="submit"]:hover {
+button,#nextButton, #prevButton[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -19,7 +19,6 @@ include_once "../components/navbar.php"
     <div class="searchResults" id="searchResults">
 
     </div>
-    <!-- <p id="noResultsMessage"></p> -->
     <div id="paginationButtons">
         <button id="prevButton">Previous</button>
         <button id="nextButton">Next</button>

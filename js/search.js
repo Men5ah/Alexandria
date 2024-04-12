@@ -1,4 +1,3 @@
-//------------------------------------------------------------------------------------------------------------------
 // Get references to the form, input field, search results container, and pagination buttons
 const searchForm = document.getElementById('searchForm');
 const searchInput = document.getElementById('search');
@@ -155,20 +154,3 @@ prevButton.addEventListener('click', () => {
         fetchAndDisplaySearchResults(pageNumber, searchInput.value.trim());
     }
 });
-
-
-
-// ajax function
-// function sendRequest(data){
-//     const ajax = new XMLHttpRequest();
-
-//     ajax.onreadystatechange = function(){
-//         if(this.readyState === 4 && this.status === 200){
-//             // window.location.href = '../views/addtoreadinglist.php';
-//         }
-//     }
-
-//     ajax.open("POST", "../views/addtoreadinglist.php", true);
-//     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//     ajax.send(data);
-// }
