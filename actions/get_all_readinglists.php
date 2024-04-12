@@ -1,7 +1,7 @@
 <?php
 include_once "../settings/connection.php";
 $conn = get_connection();
-// session_start();
+session_start();
 
 $userID = $_SESSION['userID'];
 

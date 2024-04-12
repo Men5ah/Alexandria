@@ -12,6 +12,7 @@
 
         <?php
         include_once "../actions/get_all_readinglists.php";
+        echo $selectList;
         if (isset($_GET['data'])) {
             $data = json_decode($_GET['data']);
             echo '
