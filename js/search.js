@@ -5,7 +5,7 @@ const searchInput = document.getElementById('search');
 const searchResults = document.getElementById('searchResults');
 const prevButton = document.getElementById('prevButton');
 const nextButton = document.getElementById('nextButton');
-pageNumber = 1;
+let pageNumber = 1;
 
 // Base API URL
 const apiUrl = 'https://gutendex.com';
@@ -13,6 +13,17 @@ const apiUrl = 'https://gutendex.com';
 // Global variables to store next and previous page URLs
 let nextPageUrl = null;
 let previousPageUrl = null;
+
+let selectedBookTitle;
+let selectedAuthor;
+let selectedGutenbergID;
+
+// Function to set selected book information
+function setSelectedBookInfo(title, author, gutenbergID) {
+    selectedBookTitle = title;
+    selectedAuthor = author;
+    selectedGutenbergID = gutenbergID;
+}
 
 // Function to fetch and display search results
 async function fetchAndDisplaySearchResults(pageNumber, query) {
@@ -85,6 +96,19 @@ function displaySearchResults(data) {
         linkElement.target = '_blank'; // Open link in new tab
         bookContainer.appendChild(linkElement);
 
+        const addtoReadingList = document.createElement('button');
+        addtoReadingList.textContent = 'Add to Reading List';
+        addtoReadingList.onclick = () => {
+
+            window.location.href = '../views/addtoreadinglist.php?data='+encodeURIComponent(JSON.stringify({
+                "book": book.title,
+                "author": book.authors[0].name,
+                "bookID":book.id
+            }));
+        };
+        bookContainer.appendChild(addtoReadingList);
+        
+
         // Append the book container to the search results container
         searchResults.appendChild(bookContainer);
     });
@@ -126,11 +150,25 @@ nextButton.addEventListener('click', () => {
 
 // Event listener for previous button click
 prevButton.addEventListener('click', () => {
-    if (previousPageUrl) {
-
-        //Decrement pageNumber
+    if (previousPageUrl && pageNumber > 1) {
         pageNumber--;
-        // Fetch and display search results for the previous page
         fetchAndDisplaySearchResults(pageNumber, searchInput.value.trim());
     }
 });
+
+
+
+// ajax function
+// function sendRequest(data){
+//     const ajax = new XMLHttpRequest();
+
+//     ajax.onreadystatechange = function(){
+//         if(this.readyState === 4 && this.status === 200){
+//             // window.location.href = '../views/addtoreadinglist.php';
+//         }
+//     }
+
+//     ajax.open("POST", "../views/addtoreadinglist.php", true);
+//     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//     ajax.send(data);
+// }

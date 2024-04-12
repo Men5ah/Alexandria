@@ -13,8 +13,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
     $security_measure = password_hash($password, PASSWORD_DEFAULT);
 
     $insert = "INSERT INTO register(fname, lname, email, psswd, phone) values ('$fname','$lname','$email','$security_measure','$telephone')";
-    
-    //execute query
 
     $result = mysqli_query($conn, $insert);
     
