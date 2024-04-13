@@ -7,5 +7,5 @@
 # Live Server
 http://alexandria.wuaze.com/Alexandria/
 
-# UML
+# ERD
 https://dbdiagram.io/d/Alexandria-SQL-6619cdf703593b6b61e1d866
