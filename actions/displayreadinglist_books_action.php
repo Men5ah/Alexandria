@@ -1,12 +1,9 @@
 <?php
 include_once "../settings/connection.php";
 
-
-// Function to display books belonging to a reading list
 function displayReadingListBooks($readingListId) {
     $conn = get_connection();
     // Query to retrieve books belonging to the reading list from the database
-    // Replace this with your actual database query
     $query = "SELECT * FROM readinglistbooks WHERE listID = '$readingListId'";
     $result = mysqli_query($conn, $query);
     if ($result && mysqli_num_rows($result) > 0) {

@@ -19,15 +19,6 @@ if ($result) {
     }
     $selectList .= '</select>';
 
-
-
-    // Fetch reading lists and store them in an array
-
-    // Close the select list
-    // $selectList .= '</select>';
-
-    // Output the select list
-    // echo $selectList;
 } else {
     // Handle database query error
     echo json_encode(['error' => 'Failed to fetch reading lists']);
